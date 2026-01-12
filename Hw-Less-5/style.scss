@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+}
+
+@for $i from 1 through 1000 {
+    .w-#{$i} {
+        width: $i * 10px;
+    }
+
+    .h-#{$i} {
+        height: $i * 10px;
+    }
+
+    .p-#{$i} {
+        padding: $i * 4px;
+    }
+
+    .radius-#{$i} {
+        border-radius: 28px;
+    }
+
+    .gap-#{$i} {
+        gap: $i * 4px;
+    }
+
+    .margin-#{$i} {
+        margin: $i * 10px;
+    }
+
+    .text-#{$i} {
+        font-size: $i * 10px;
+    }
+}
+
+$displays: flex, none, grid, block, inline, inline-block;
+$justifies: center, end, start, space-between, space-evenly, space-around;
+$alaign-items: center, end, start;
+$directions: row, column, row-reverse, column-reverse;
+
+@each $display in $displays {
+    .#{$display} {
+        display: $display;
+    }
+}
+
+@each $justify in $justifies {
+    .#{$justify} {
+        justify-content: $justify;
+    }
+}
+
+@each $align-item in $alaign-items {
+    .#{$align-item} {
+        $align-items: $align-item;
+    }
+}
+
+@each $direction in $directions {
+    .#{$direction} {
+        direction: $directions;
+    }
+}
+
+$colors: (
+    surkh: red,
+    zard: yellow,
+    kabud: blue,
+    sabz: green,
+    gulobi: pink,
+    safed: white,
+    siyoh: black,
+    osmoni: rgb(202, 231, 242),
+);
+
+@each $key, $value in $colors {
+    .text-#{$key} {
+        color: $value;
+    }
+
+    .bg-#{$key} {
+        background-color: $value;
+    }
+}
+
+body {
+    padding: 20px;
+}
+
+.btn1 {
+    background: linear-gradient(100deg, skyblue, green);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+.box{
+    display: flex;
+    justify-content: space-evenly
+}
+.btn2 {
+    @extend .btn1;
+}
+
+.box6 {
+    @extend .btn1;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.box7 {
+    border-radius: 20px;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.boxx1 {
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.boxx4 {
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+.img1 {
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    left: 500px;
+}
+
+.wb {
+    position: absolute;
+    top: 100px;
+    left: 1150px;
+}
+
+.xat {
+    position: absolute;
+    top: 100px;
+    left: 860px;
+    z-index: 1;
+}
+
+.ozon {
+    position: absolute;
+    top: 250px;
+    left: 700px;
+    z-index: 2;
+}
+
+.inp1 {
+    outline: none;
+}
+
+.box17 {
+    @extend .btn1;
+    padding: 50px;
+    display: flex;
+    margin: 50px;
+}
+
+.box27 {
+    @extend .btn1;
+    padding: 50px;
+    display: flex;
+    margin: 50px;
+}
+
+.boxx4 {
+    justify-content: space-between;
+}
+
+.img2 {
+    width: 250px;
+}
+
+.box19 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.img3 {
+    width: 200px;
+    position: absolute;
+    top: 1850px;
+    left: 850px;
+}
+
+.img4 {
+    width: 200px;
+    position: absolute;
+    top: 3030px;
+    left: 850px;
+    z-index: 1;
+}
+
+.img5 {
+    width: 200px;
+    position: absolute;
+    top: 3030px;
+    left: 1000px;
+}
+
+.img6 {
+    width: 200px;
+    position: absolute;
+    top: 3110px;
+    left: 750px;
+}
+
+.img2 {
+    width: 200px;
+    position: absolute;
+    top: 1800px;
+    left: 930px;
+    z-index: 1;
+}
+
+.btn3 {
+    background: linear-gradient(100deg, skyblue, green);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.btn4 {
+    background: transparent;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.btn5 {
+    background: transparent;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.btn6 {
+    background: transparent;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 150px;
+}
+
+.butons {
+    margin-left: 50px;
+}
+
+.btn7 {
+    background: linear-gradient(100deg, skyblue, green);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    width: 200px;
+}
+
+.btn8 {
+    background: transparent;
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 20px;
+    width: 200px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+
+    img {
+        width: 15px;
+    }
+}
+
+.boxx11 {
+    padding: 30px;
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    box-shadow: 0px 0px 10px 1px gray;
+    width: 200px;
+}
+
+.boxx12 {
+    padding: 30px;
+    background-color: #2a85ee18;
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    box-shadow: 0px 0px 10px 1px gray;
+    width: 200px;
+}
+
+.boxx13 {
+    padding: 30px;
+    background-color: rgba(144, 238, 144, 0.34);
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    box-shadow: 0px 0px 10px 1px gray;
+    width: 200px;
+}
+
+.boxx14 {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 50px;
+}
+
+.doter {
+    width: 350px;
+}
+
+.gift1 {
+    width: 150px;
+}
+
+.gift2 {
+    width: 200px;
+}
+
+.boxx15 {
+    background: linear-gradient(100deg, rgb(244, 210, 147), orange);
+    padding: 40px;
+    margin: 50px;
+    border: none;
+    border-radius: 20px;
+}
+
+.img7 {
+    flex-direction: row-reverse;
+}
+
+.main6 {
+    padding: 20px;
+    background-color: #EAF3FD;
+    margin-top: 30px;
+    width: 650px;
+}
+
+.btn9 {
+    background: linear-gradient(100deg, skyblue, rgb(117, 128, 0));
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.main3 {
+    background: linear-gradient(100deg, skyblue, green);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    padding: 30px;
+    height: 450px;
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .inp2 {
+        outline: none;
+        padding: 5px;
+        width: 250px;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    .img7 {
+        width: 150px;
+        position: absolute;
+        left: 1100px;
+    }
+
+    .img8 {
+        width: 100px;
+    }
+}
+
+.burger {
+    display: none;
+}
+.nek1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media(max-width:520px) {
+    .nek1 {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        gap: 20px;
+        display: flex;
+
+        .nek2 {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .box8{
+        width: 350px;
+        
+        h1{
+            text-align: start;
+            margin-left: -50px;
+        }
+        h1{font-size: 40px;}
+        .img1{
+            width: 100px;
+            margin-left: -140px;
+        }
+        text-align: start;
+    }
+    .nek3{
+        display: none;
+    }
+    .pp1{
+        width: 400px;
+        margin-left: -60px;
+        font-size: 25px;
+    }
+    .box6{
+        width: 380px;
+        margin-left: -50px;
+    }
+    .box7{
+        flex-direction: column;
+        background-color: transparent;
+        input{
+            padding: 10px;
+            border-radius: 20px;
+        }
+    }
+    .box8{
+        flex-direction: column;
+        width: 400px;
+        text-align: center;
+        margin-left: 5px;
+        .box10, .box11, .box12{
+            width: 400px;
+
+        }
+        p{
+            font-size: 20px;
+        }
+        .hh1{
+            margin-left: 50px;
+        }
+    }
+    .box14{
+        display: none;
+    }
+    .box13{
+        width: 350px;
+    }
+    .txt1{
+        font-size: 35px;
+    }
+    .box15{
+        flex-direction: column;
+        margin-left: -70px;
+        img{
+            width: 450px;
+        }
+    }
+    .box50{
+        width: 350px;
+    }
+
+}
